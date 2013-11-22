@@ -148,7 +148,6 @@ def chebdif(N,M):
         DM[ell,:,:] = D                               # Store current D in DM
 
     return x,DM
-    pass
 
 def herdif():
     pass

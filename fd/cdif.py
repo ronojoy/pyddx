@@ -66,21 +66,7 @@ def cdif(N, m, stw, xh):
     Examples
     --------
     
-    The weights of the 3-point central difference approximation are obtained
-    as 
     
-    >>> w =  pyddx.fd.fdweights[[-1, 0, 1], 0, 2]
-    
-    w[0], w[1] and w[2] contain the weights, respectively, of the 
-    interpolating polynomial and the first two derivatives. 
-    
-    The weights of the 5-point central difference approximation are obtained,
-    similarly, as
-    
-    >>> w = pyddx.fd.fdweights[[-2, -1, 0, 1, 2], 0, 4]
-    
-    Now, w[0], w[1], w[2], w[3] and w[4] contain the weights, respectively,
-    of the interpolating polynomial and the first 4 derivatives. 
     '''
     
     if m >= N:

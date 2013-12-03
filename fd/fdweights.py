@@ -57,7 +57,7 @@ def fdweights(m, x0, x, dtype='float_'):
     The weights of the 3-point central difference approximation are obtained
     as 
     
-    >>> w =  pyddx.fd.fdweights[[-1, 0, 1], 0, 2]
+    >>> w =  pyddx.fd.fdweights[2, 0, [-1, 0, 1]]
     
     w[0,:], w[1,:] and w[2,:] contain the weights, respectively, of the 
     interpolating polynomial and the first two derivatives. 
@@ -65,7 +65,7 @@ def fdweights(m, x0, x, dtype='float_'):
     The weights of the 5-point central difference approximation are obtained,
     similarly, as
     
-    >>> w = pyddx.fd.fdweights[[-2, -1, 0, 1, 2], 0, 4]
+    >>> w = pyddx.fd.fdweights[4, 0, [-2, -1, 0, 1, 2]]
     
     Now, w[0,:], w[1,:], w[2,:], w[3,:] and w[4,:] contain the weights, respectively,
     of the interpolating polynomial and the first four derivatives. 

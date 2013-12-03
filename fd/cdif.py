@@ -106,7 +106,7 @@ def cdif(N, m, stw, xh):
     diags = np.arange(N-1, N-1-sthw, -1)
     
     D = D + sp.sparse.spdiags(data[0 : sthw - 1, :], -diags, N, N, 'lil') \
-          + sp.sparse.spdiags(data[sthw + 1, stw - 1], diags, N, N, 'lil')
+          + sp.sparse.spdiags(data[sthw + 1, stw - 1, :], diags, N, N, 'lil')
          
     D = D.tocsr()
         

@@ -188,12 +188,23 @@ def cdif(N, m, stw, h):
         
     Examples
     --------
-    To construct the 3-point central difference Laplacian on a grid of 32
-    points, 
-
+    
+    The derivatives of functions can be obtained by multiplying the vector of
+    function values by the differentiation matrix. The 3-point stencil 
+    approximations of the first two derivatives of a a grid function f can 
+    be obtained as
+    
+    >>> N = 32; h = 2*pi/N; x = np.arange(N) * h
+    >>> f = sin(x)
     >>> from pyddx.fd import fdsuite as fds
-    >>> L = fds.cdif(32, 2, 3, 1)    
-    >>> spy(L)
+    >>> D1 = fds.cdif(N, 1, 3, h)   # first derivative
+    >>> D2 = fds.cdif(N, 2, 3, h)   # second derivative
+    >>> plot(x, y, 'b', x, D1.dot(y), 'r*', x, D2.dot(y), 'r-')
+    
+    To view the differentiation matrix use 
+    
+    >>> spy(D1)
+    
     '''
     
     if m >= N:

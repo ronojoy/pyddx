@@ -235,5 +235,9 @@ def cdif(N, m, stw, xh):
     # the upper circulant diagonals
     diags = np.arange(N - sthw, N, 1) 
     D = D + sp.sparse.spdiags(data[0 : sthw, :], diags, N, N)
-        
+    
+    # scale by the grid spacing
+    hm = np.power(h, m)
+    D = D/hm
+    
     return D

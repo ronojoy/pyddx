@@ -128,7 +128,7 @@ def fdweights(m, x0, x, dtype='float_'):
     return weights
 
 
-def cdif(N, m, stw, xh):
+def cdif(N, m, stw, h):
     '''
     Calculate differentiation matrices using central differences.
 
